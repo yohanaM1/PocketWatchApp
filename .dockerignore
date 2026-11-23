@@ -1,0 +1,13 @@
+# Build context for the backend image is the repo root. Keep secrets, local
+# environments and caches out of it.
+.git
+.claude
+.env
+**/.venv
+**/node_modules
+frontend/dist
+data/
+**/__pycache__
+**/*.pyc
+.ruff_cache
+**/.pytest_cache

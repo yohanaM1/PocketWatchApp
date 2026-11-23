@@ -1,0 +1,190 @@
+{
+ "run_at": "2026-11-11T17:47:42",
+ "source": "live",
+ "model": "qwen3-small",
+ "data": "/Users/penieljohnson/cmsc389a/PocketWatch/data",
+ "rows": 529,
+ "groups": 58,
+ "llm_calls": 8,
+ "seconds": 83.9,
+ "call_seconds": [
+  40.1,
+  6.8,
+  5.0,
+  5.3,
+  6.0,
+  7.5,
+  10.3,
+  2.8
+ ],
+ "estimated_import_seconds": 40.1,
+ "parallel": 4,
+ "import_time_budget_s": 75.0,
+ "batch_size": 8,
+ "top_guess_accuracy": {
+  "correct": 521,
+  "rows": 529
+ },
+ "unanswered_rows": 0,
+ "threshold": 0.75,
+ "auto_categorized": {
+  "rows": 507,
+  "correct": 501
+ },
+ "sent_to_review": {
+  "rows": 22,
+  "would_have_been_wrong": 2
+ },
+ "per_category": {
+  "Dining": {
+   "rows": 194,
+   "correct": 194
+  },
+  "Education": {
+   "rows": 8,
+   "correct": 8
+  },
+  "Entertainment": {
+   "rows": 7,
+   "correct": 7
+  },
+  "Groceries": {
+   "rows": 76,
+   "correct": 76
+  },
+  "Health": {
+   "rows": 14,
+   "correct": 14
+  },
+  "Income": {
+   "rows": 13,
+   "correct": 13
+  },
+  "Other": {
+   "rows": 9,
+   "correct": 6
+  },
+  "Rent": {
+   "rows": 6,
+   "correct": 6
+  },
+  "Shopping": {
+   "rows": 54,
+   "correct": 54
+  },
+  "Subscriptions": {
+   "rows": 29,
+   "correct": 24
+  },
+  "Transfers": {
+   "rows": 37,
+   "correct": 37
+  },
+  "Transport": {
+   "rows": 64,
+   "correct": 64
+  },
+  "Utilities": {
+   "rows": 18,
+   "correct": 18
+  }
+ },
+ "confidence_buckets": [
+  {
+   "confidence": "0.00\u20130.50",
+   "rows": 0,
+   "correct": 0
+  },
+  {
+   "confidence": "0.50\u20130.75",
+   "rows": 22,
+   "correct": 20
+  },
+  {
+   "confidence": "0.75\u20130.90",
+   "rows": 47,
+   "correct": 46
+  },
+  {
+   "confidence": "0.90\u20131.00",
+   "rows": 460,
+   "correct": 455
+  }
+ ],
+ "threshold_sweep": [
+  {
+   "threshold": 0.5,
+   "auto_rows": 529,
+   "auto_correct": 521
+  },
+  {
+   "threshold": 0.6,
+   "auto_rows": 528,
+   "auto_correct": 521
+  },
+  {
+   "threshold": 0.7,
+   "auto_rows": 522,
+   "auto_correct": 515
+  },
+  {
+   "threshold": 0.75,
+   "auto_rows": 507,
+   "auto_correct": 501
+  },
+  {
+   "threshold": 0.8,
+   "auto_rows": 507,
+   "auto_correct": 501
+  },
+  {
+   "threshold": 0.85,
+   "auto_rows": 503,
+   "auto_correct": 497
+  },
+  {
+   "threshold": 0.9,
+   "auto_rows": 460,
+   "auto_correct": 455
+  },
+  {
+   "threshold": 0.95,
+   "auto_rows": 395,
+   "auto_correct": 390
+  }
+ ],
+ "confusions": [
+  {
+   "true": "Subscriptions",
+   "predicted": "Education",
+   "rows": 5,
+   "merchants": [
+    "CHEGG ORDER"
+   ]
+  },
+  {
+   "true": "Other",
+   "predicted": "Transfers",
+   "rows": 1,
+   "merchants": [
+    "XJ4HOLDINGS"
+   ]
+  },
+  {
+   "true": "Other",
+   "predicted": "Subscriptions",
+   "rows": 1,
+   "merchants": [
+    "DIGITALSVC LONDON GB"
+   ]
+  },
+  {
+   "true": "Other",
+   "predicted": "Shopping",
+   "rows": 1,
+   "merchants": [
+    "NOVAGADGETS"
+   ]
+  }
+ ]
+}

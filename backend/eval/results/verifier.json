@@ -1,0 +1,44 @@
+{
+ "run_at": "2026-11-11T15:42:13",
+ "mutations": 2760,
+ "caught": 2760,
+ "by_kind": {
+  "category": {
+   "mutations": 36,
+   "caught": 36
+  },
+  "date": {
+   "mutations": 23,
+   "caught": 23
+  },
+  "digit": {
+   "mutations": 2394,
+   "caught": 2394
+  },
+  "drop_line": {
+   "mutations": 48,
+   "caught": 48
+  },
+  "extra": {
+   "mutations": 95,
+   "caught": 95
+  },
+  "format": {
+   "mutations": 27,
+   "caught": 27
+  },
+  "sign": {
+   "mutations": 50,
+   "caught": 50
+  },
+  "swap": {
+   "mutations": 17,
+   "caught": 17
+  },
+  "word": {
+   "mutations": 70,
+   "caught": 70
+  }
+ },
+ "survivors": []
+}

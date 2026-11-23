@@ -1,0 +1,9 @@
+{
+  "base": "single_dining_sep",
+  "description": "September and October totals swapped in the text",
+  "text_edits": [{"old": "$61.87", "new": "$82.54"}],
+  "extra": null,
+  "slot_edits": [],
+  "result_edits": [],
+  "expect_reason": "slot money_spending"
+}

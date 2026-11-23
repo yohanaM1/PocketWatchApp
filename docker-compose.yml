@@ -1,0 +1,63 @@
+# `docker compose up --build` starts the whole app on http://localhost:${WEB_PORT:-8080}.
+# For local development you can still start just the database: `docker compose up -d db`.
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpass}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-pocketwatch}
+      MYSQL_USER: ${MYSQL_USER:-pocketwatch}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-pocketwatch}
+    # Bound to 127.0.0.1: host-run pytest/alembic can reach it, but on a VM MySQL
+    # isn't exposed to the internet.
+    ports:
+      - "127.0.0.1:${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-rootpass}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    # An allowlist of the backend's settings, read from .env when it exists. Not env_file,
+    # so the root password, TEST_DATABASE_URL and the host-only DATABASE_URL stay out.
+    environment:
+      DATABASE_URL: mysql+pymysql://${MYSQL_USER:-pocketwatch}:${MYSQL_PASSWORD:-pocketwatch}@db:3306/${MYSQL_DATABASE:-pocketwatch}
+      JWT_SECRET: ${JWT_SECRET:-}    # empty: the entrypoint uses a random one for this run
+      JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-1440}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      LLM_TOOL_CHOICE: ${LLM_TOOL_CHOICE:-required}
+      LLM_TEMPERATURE: ${LLM_TEMPERATURE-0}    # `-` not `:-`: an explicit empty value means "don't send it"
+      AGENT_EXPLORATION: ${AGENT_EXPLORATION:-false}
+      REVIEW_CONFIDENCE_THRESHOLD: ${REVIEW_CONFIDENCE_THRESHOLD:-0.75}
+      ANOMALY_LARGE_MULTIPLE: ${ANOMALY_LARGE_MULTIPLE:-5}
+      ANOMALY_LARGE_CATEGORY_MULTIPLE: ${ANOMALY_LARGE_CATEGORY_MULTIPLE:-8}
+      ANOMALY_UNFAMILIAR_MIN: ${ANOMALY_UNFAMILIAR_MIN:-75}
+      BUDGET_NEAR_FRACTION: ${BUDGET_NEAR_FRACTION:-0.8}
+      DEMO_EMAIL: ${DEMO_EMAIL:-}    # for `docker compose exec backend python -m scripts.seed_demo_user`
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-}
+    depends_on:
+      db:
+        condition: service_healthy
+    # No published port: only reachable through nginx in `web`.
+
+  web:
+    build: frontend
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  db_data:

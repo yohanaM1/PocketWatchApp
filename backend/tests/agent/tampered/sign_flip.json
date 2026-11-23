@@ -1,0 +1,9 @@
+{
+  "base": "multi_food_oct",
+  "description": "Renderer sign bug: a spending amount shown as a refund-style negative",
+  "text_edits": [{"old": "$57.82", "new": "-$57.8"}],
+  "extra": null,
+  "slot_edits": [],
+  "result_edits": [],
+  "expect_reason": "slot money_spending"
+}

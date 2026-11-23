@@ -1,0 +1,9 @@
+{
+  "base": "single_dining_sep",
+  "description": "A digit added to the extra sentence",
+  "text_edits": [],
+  "extra": "That's about 60 dollars, well done.",
+  "slot_edits": [],
+  "result_edits": [],
+  "expect_reason": "number outside any slot"
+}

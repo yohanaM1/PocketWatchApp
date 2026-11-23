@@ -1,0 +1,92 @@
+{
+ "all": [
+  {
+   "request": "12c45db7370b48ef",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-9a569819a5f61a00",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Dining\", \"confidence\": 0.98}, {\"group\": 1, \"category\": \"Groceries\", \"confidence\": 0.7}, {\"group\": 2, \"category\": \"Dining\", \"confidence\": 0.98}, {\"group\": 3, \"category\": \"Rent\", \"confidence\": 0.99}, {\"group\": 4, \"category\": \"Groceries\", \"confidence\": 0.95}, {\"group\": 5, \"category\": \"Transfers\", \"confidence\": 0.95}, {\"group\": 6, \"category\": \"Dining\", \"confidence\": 0.95}, {\"group\": 7, \"category\": \"Transfers\", \"confidence\": 0.95}]}"
+    }
+   ]
+  },
+  {
+   "request": "c37ab3cf0e82903e",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-b74f334b1bf8e5fa",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Income\", \"confidence\": 0.98}, {\"group\": 1, \"category\": \"Health\", \"confidence\": 0.9}, {\"group\": 2, \"category\": \"Subscriptions\", \"confidence\": 0.85}, {\"group\": 3, \"category\": \"Groceries\", \"confidence\": 0.97}, {\"group\": 4, \"category\": \"Education\", \"confidence\": 0.95}, {\"group\": 5, \"category\": \"Transfers\", \"confidence\": 0.92}, {\"group\": 6, \"category\": \"Dining\", \"confidence\": 0.95}, {\"group\": 7, \"category\": \"Transport\", \"confidence\": 0.95}]}"
+    }
+   ]
+  },
+  {
+   "request": "4abc1d1c07ab2cd9",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-a7bfb885aa35164a",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Groceries\", \"confidence\": 0.98}, {\"group\": 1, \"category\": \"Groceries\", \"confidence\": 0.98}, {\"group\": 2, \"category\": \"Education\", \"confidence\": 0.9}, {\"group\": 3, \"category\": \"Utilities\", \"confidence\": 0.9}, {\"group\": 4, \"category\": \"Transport\", \"confidence\": 0.95}, {\"group\": 5, \"category\": \"Shopping\", \"confidence\": 0.85}, {\"group\": 6, \"category\": \"Utilities\", \"confidence\": 0.9}, {\"group\": 7, \"category\": \"Dining\", \"confidence\": 0.95}]}"
+    }
+   ]
+  },
+  {
+   "request": "f6c47c5983e76615",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-8820d98ef696b2df",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Transport\", \"confidence\": 0.98}, {\"group\": 1, \"category\": \"Dining\", \"confidence\": 0.95}, {\"group\": 2, \"category\": \"Dining\", \"confidence\": 0.95}, {\"group\": 3, \"category\": \"Dining\", \"confidence\": 0.97}, {\"group\": 4, \"category\": \"Transport\", \"confidence\": 0.98}, {\"group\": 5, \"category\": \"Shopping\", \"confidence\": 0.6}, {\"group\": 6, \"category\": \"Subscriptions\", \"confidence\": 0.98}, {\"group\": 7, \"category\": \"Other\", \"confidence\": 0.95}]}"
+    }
+   ]
+  },
+  {
+   "request": "9e0f67e5ac7e5168",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-8d8ab3642e91a25b",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Subscriptions\", \"confidence\": 0.98}, {\"group\": 1, \"category\": \"Health\", \"confidence\": 0.8}, {\"group\": 2, \"category\": \"Utilities\", \"confidence\": 0.98}, {\"group\": 3, \"category\": \"Subscriptions\", \"confidence\": 0.98}, {\"group\": 4, \"category\": \"Dining\", \"confidence\": 0.95}, {\"group\": 5, \"category\": \"Dining\", \"confidence\": 0.98}, {\"group\": 6, \"category\": \"Transport\", \"confidence\": 0.95}, {\"group\": 7, \"category\": \"Dining\", \"confidence\": 0.98}]}"
+    }
+   ]
+  },
+  {
+   "request": "62fe3b4f277d1639",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-891a5772dbfbb779",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Education\", \"confidence\": 0.95}, {\"group\": 1, \"category\": \"Groceries\", \"confidence\": 0.95}, {\"group\": 2, \"category\": \"Dining\", \"confidence\": 0.98}, {\"group\": 3, \"category\": \"Transfers\", \"confidence\": 0.7}, {\"group\": 4, \"category\": \"Shopping\", \"confidence\": 0.9}, {\"group\": 5, \"category\": \"Transport\", \"confidence\": 0.95}, {\"group\": 6, \"category\": \"Other\", \"confidence\": 0.98}, {\"group\": 7, \"category\": \"Entertainment\", \"confidence\": 0.98}]}"
+    }
+   ]
+  },
+  {
+   "request": "0bc36c997ba438d2",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-a3e902c07a5ad594",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Subscriptions\", \"confidence\": 0.5}, {\"group\": 1, \"category\": \"Transport\", \"confidence\": 0.9}, {\"group\": 2, \"category\": \"Other\", \"confidence\": 0.95}, {\"group\": 3, \"category\": \"Other\", \"confidence\": 0.95}, {\"group\": 4, \"category\": \"Entertainment\", \"confidence\": 0.95}, {\"group\": 5, \"category\": \"Entertainment\", \"confidence\": 0.9}, {\"group\": 6, \"category\": \"Shopping\", \"confidence\": 0.85}, {\"group\": 7, \"category\": \"Entertainment\", \"confidence\": 0.9}]}"
+    }
+   ]
+  },
+  {
+   "request": "a0bfdc29f23c7855",
+   "text": "",
+   "tool_calls": [
+    {
+     "id": "chatcmpl-tool-8eb9d4396f2395ba",
+     "name": "assign_categories",
+     "arguments": "{\"assignments\": [{\"group\": 0, \"category\": \"Entertainment\", \"confidence\": 0.98}, {\"group\": 1, \"category\": \"Dining\", \"confidence\": 0.98}]}"
+    }
+   ]
+  }
+ ]
+}

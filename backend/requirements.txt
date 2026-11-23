@@ -1,0 +1,24 @@
+# Database
+SQLAlchemy==2.1.4
+alembic==1.20.0
+PyMySQL==1.2.3
+cryptography==50.0.2
+python-dotenv==1.2.4
+
+# API
+fastapi==0.143.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+pydantic==2.14.1
+email-validator==2.3.0
+
+# Auth
+PyJWT==2.15.1
+pwdlib[argon2]==0.3.1
+
+# Agent (httpx2 installs the module `httpx2`; the LLM client imports it as httpx)
+httpx2==2.13.1
+tzdata==2026.5
+
+# Tests
+pytest==9.1.1
